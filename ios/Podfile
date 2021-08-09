@@ -9,6 +9,13 @@ end
 
 target 'Plugin' do
   capacitor_pods
+  pod 'AEPCore'
+  pod 'AEPAnalytics'
+  pod 'AEPUserProfile'
+  pod 'AEPLifecycle'
+  pod 'AEPIdentity'
+  pod 'AEPSignal'
+
 end
 
 target 'PluginTests' do

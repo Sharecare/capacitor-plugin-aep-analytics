@@ -1,11 +1,44 @@
 PODS:
+  - AEPAnalytics (3.0.1):
+    - AEPCore
+    - AEPServices
+  - AEPCore (3.2.3):
+    - AEPRulesEngine (= 1.0.1)
+    - AEPServices (= 3.2.3)
+  - AEPIdentity (3.2.3):
+    - AEPCore (= 3.2.3)
+  - AEPLifecycle (3.2.3):
+    - AEPCore (= 3.2.3)
+  - AEPRulesEngine (1.0.1)
+  - AEPServices (3.2.3)
+  - AEPSignal (3.2.3):
+    - AEPCore (= 3.2.3)
+  - AEPUserProfile (3.0.1):
+    - AEPCore
   - Capacitor (2.4.8):
     - CapacitorCordova
   - CapacitorCordova (2.4.8)
 
 DEPENDENCIES:
+  - AEPAnalytics
+  - AEPCore
+  - AEPIdentity
+  - AEPLifecycle
+  - AEPSignal
+  - AEPUserProfile
   - "Capacitor (from `../node_modules/@capacitor/ios`)"
   - "CapacitorCordova (from `../node_modules/@capacitor/ios`)"
+
+SPEC REPOS:
+  trunk:
+    - AEPAnalytics
+    - AEPCore
+    - AEPIdentity
+    - AEPLifecycle
+    - AEPRulesEngine
+    - AEPServices
+    - AEPSignal
+    - AEPUserProfile
 
 EXTERNAL SOURCES:
   Capacitor:
@@ -14,9 +47,17 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@capacitor/ios"
 
 SPEC CHECKSUMS:
+  AEPAnalytics: 13353b3ea333be0af7cfc4845830d87d360726e2
+  AEPCore: eaa2a725705c17d2a63c131aa682a21429688ee6
+  AEPIdentity: 8e28eeda440dbbaac977e6e499feeb5a2bf3f2a8
+  AEPLifecycle: e492629ac51c0e123e02b81238cebefaa3e7cb82
+  AEPRulesEngine: 5075ed294026a12e37bd26fe260f74604d205354
+  AEPServices: 29df53822d7708b602ab5789b668734e3b24b6c7
+  AEPSignal: 1bcaabf874da22a31cb777d6ff5908b63142b378
+  AEPUserProfile: 2ddb5ba8e2c22dd8f942992306b050f4be2c2403
   Capacitor: 36f12802b85f18210037f92e5272a0e972f8eb1f
   CapacitorCordova: 258780f03814ecff8f39bb99c354113225df6a4a
 
-PODFILE CHECKSUM: e66d6fa04b0daaf06d8498d39637adf77139c716
+PODFILE CHECKSUM: 6bce2b037cd958e68c024fb712064b394e4943ce
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.1
