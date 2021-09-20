@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.adobe.marketing.mobile:identity:1.2.2@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/42dfcb578b37831295304550e5a67b05/transformed/jetified-identity-1.2.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/42dfcb578b37831295304550e5a67b05/transformed/jetified-identity-1.2.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/42dfcb578b37831295304550e5a67b05/transformed/jetified-identity-1.2.2/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.adobe.marketing.mobile/identity/1.2.2/6247cafe53c8ce16044ee9c0d40c1af970e8b241/identity-1.2.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>

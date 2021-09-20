@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.adobe.marketing.mobile:mobileservices:1.1.4@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/4804a2754cf213e85351912ca0aabe7e/transformed/jetified-mobileservices-1.1.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4804a2754cf213e85351912ca0aabe7e/transformed/jetified-mobileservices-1.1.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4804a2754cf213e85351912ca0aabe7e/transformed/jetified-mobileservices-1.1.4/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.adobe.marketing.mobile/mobileservices/1.1.4/c7adb5dd71c44d613146669805db39d95a05c05c/mobileservices-1.1.4-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>
