@@ -33,12 +33,14 @@ public class AepAnalytics {
         SharedPreferences sharedPref = context.getSharedPreferences("com.aepanalytics.AepApplication", Context.MODE_PRIVATE);
         this.handleGooglePlayReferrer();
         if (sharedPref.getBoolean("firstrun", true)) {
-            Boolean aepPluginEnabled = true; // TO DO CHECK THIS, this was edited by gulp
+            // TO DO CHECK THIS, this was edited by gulp
+            Boolean aepPluginEnabled = true;
             if (aepPluginEnabled == false) {
                 return;
             }
-
-            MobileCore.setApplication((Application)context); // TO DO CHECK THIS
+            
+            // TO DO CHECK THIS
+            MobileCore.setApplication((Application)context);
             MobileCore.setLogLevel(LoggingMode.DEBUG);
 
             try {
@@ -52,6 +54,7 @@ public class AepAnalytics {
                 MobileCore.start(new AdobeCallback () {
                     @Override
                     public void call(Object o) {
+                        // TO DO CHECK THIS, aepAppId @ ua.vars.json
                         MobileCore.configureWithAppID("7b7e1e4c7d6a/e34e345e6f5b/launch-f5b515c96664-development");
                         MobileCore.lifecycleStart(null);
 
