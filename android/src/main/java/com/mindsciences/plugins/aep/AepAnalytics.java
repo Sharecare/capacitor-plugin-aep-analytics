@@ -4,6 +4,7 @@ import android.app.Application;
 import android.content.SharedPreferences;
 import android.content.Context;
 import android.os.RemoteException;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -26,7 +27,7 @@ public class AepAnalytics {
 
     private Context _context;
 
-    public void load(Context context) {
+    public void load(Context context, AppCompatActivity activity) {
         _context = context;
 
         // Called when the plugin is first constructed in the bridge
@@ -39,8 +40,7 @@ public class AepAnalytics {
                 return;
             }
             
-            // TO DO CHECK THIS
-            MobileCore.setApplication((Application)context);
+            MobileCore.setApplication(activity.getApplication());
             MobileCore.setLogLevel(LoggingMode.DEBUG);
 
             try {

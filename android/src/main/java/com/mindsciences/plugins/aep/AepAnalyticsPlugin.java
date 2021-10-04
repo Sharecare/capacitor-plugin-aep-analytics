@@ -10,6 +10,6 @@ public class AepAnalyticsPlugin extends Plugin {
 
     @Override
     public void load() {
-        implementation.load(this.getContext());
+        implementation.load(this.getContext(), this.getActivity());
     }
 }
