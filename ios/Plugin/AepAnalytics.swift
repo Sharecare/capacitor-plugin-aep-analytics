@@ -8,7 +8,7 @@ import AEPSignal
 import AEPServices
 
 @objc public class AepAnalytics: NSObject {
-    @objc public func load() {
+    @objc public func load(appId: String) {
         if (UserDefaults.standard.bool(forKey: "HasLaunchedOnce")) {
             // App already launched
             print("[AEP Plugin] App already launched")
@@ -18,8 +18,6 @@ import AEPServices
             // save flag
             UserDefaults.standard.set(true, forKey: "HasLaunchedOnce")
             UserDefaults.standard.synchronize()
-
-            let appId = "7b7e1e4c7d6a/e34e345e6f5b/launch-f5b515c96664-development"
 
             // register aep
             print("[AEP Plugin] Init Aep with appId \(appId)")
