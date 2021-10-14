@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <bool name="aep_enabled">false</bool>
+    <string name="aep_app_id"></string>
+</resources>

@@ -27,19 +27,16 @@ public class AepAnalytics {
 
     private Context _context;
 
-    public void load(Context context, AppCompatActivity activity) {
+    public void load(Context context, AppCompatActivity activity, String aepAppId) {
         _context = context;
 
         // Called when the plugin is first constructed in the bridge
         SharedPreferences sharedPref = context.getSharedPreferences("com.aepanalytics.AepApplication", Context.MODE_PRIVATE);
         this.handleGooglePlayReferrer();
         if (sharedPref.getBoolean("firstrun", true)) {
-            // TO DO CHECK THIS, this was edited by gulp
-            Boolean aepPluginEnabled = true;
-            if (aepPluginEnabled == false) {
-                return;
-            }
-            
+            System.out.println("### AepAnalytics - first install, using app id:\n");
+            System.out.println(aepAppId);
+
             MobileCore.setApplication(activity.getApplication());
             MobileCore.setLogLevel(LoggingMode.DEBUG);
 
@@ -54,8 +51,7 @@ public class AepAnalytics {
                 MobileCore.start(new AdobeCallback () {
                     @Override
                     public void call(Object o) {
-                        // TO DO CHECK THIS, aepAppId @ ua.vars.json
-                        MobileCore.configureWithAppID("7b7e1e4c7d6a/e34e345e6f5b/launch-f5b515c96664-development");
+                        MobileCore.configureWithAppID(aepAppId);
                         MobileCore.lifecycleStart(null);
 
                         Map<String, String> additionalContextData = new HashMap<String, String>();
