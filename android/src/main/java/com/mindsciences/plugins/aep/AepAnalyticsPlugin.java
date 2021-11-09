@@ -10,13 +10,17 @@ public class AepAnalyticsPlugin extends Plugin {
 
     @Override
     public void load() {
-        Boolean aepEnabled = this.getContext().getResources().getBoolean(R.bool.aep_enabled);
+
+        int aepEnabledIdentifier = getResourceId("aep_enabled", "bool");
+        int aepAppIdIdentifier = getResourceId("aep_app_id", "string");
+
+        boolean aepEnabled = this.getContext().getResources().getBoolean(aepEnabledIdentifier);
         if (!aepEnabled) {
             System.out.println("### AepAnalytics - Not enabled\n");
             return;
         }
 
-        String aepAppId = this.getContext().getString(R.string.aep_app_id);
+        String aepAppId = this.getContext().getString(aepAppIdIdentifier);
 
         if (aepAppId.isEmpty()) {
             System.out.println("### AepAnalytics - Enabled but aepAppId is empty\n");
@@ -24,5 +28,12 @@ public class AepAnalyticsPlugin extends Plugin {
         }
 
         implementation.load(this.getContext(), this.getActivity(), aepAppId);
+    }
+
+    private int getResourceId(String name, String type) {
+        String qualifiedName = getContext().getPackageName() + ":" + type + "/" + name;
+        return getContext()
+                .getResources()
+                .getIdentifier(qualifiedName, null, null);
     }
 }
